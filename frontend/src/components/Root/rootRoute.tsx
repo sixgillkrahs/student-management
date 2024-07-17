@@ -9,11 +9,16 @@ import LayoutComponent from "../../views/layout/layoutComponent";
 import HomeViews from "../../views/home/home";
 import LoginView from "../../views/login/login";
 import ErrorView from "../../views/404/404";
+import FacultyView from "../../views/faculty/faculty";
 
 const homeRoute: RouteObject[] = [
   {
     path: "/",
     element: <HomeViews />,
+  },
+  {
+    path: "/faculty",
+    element: <FacultyView />,
   },
 ];
 

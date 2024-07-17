@@ -29,14 +29,21 @@ module.exports = {
 		routes: [
 			{
 				path: "/api",
-
+				// định nghĩa xem action nào sẽ được public ra ngoài
+				// chỉ có những action trong mảng mới đc public
 				whitelist: ["**"],
 				use: [],
 				mergeParams: true,
 				authentication: false,
 				authorization: false,
 				autoAliases: true,
-				aliases: {},
+				aliases: {
+					// "GET users": "users.list",
+					// "GET users/:id": "users.get",
+					// "POST users": "users.create",
+					// "PUT users/:id": "users.update",
+					// "DELETE users/:id": "users.remove",
+				},
 				callOptions: {},
 				bodyParsers: {
 					json: {
